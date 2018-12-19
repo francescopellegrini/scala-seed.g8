@@ -1,12 +1,15 @@
-This is a [Giter8][g8] template for Scala.
+A [Giter8][g8] template for Scala projects!
+
+Creating a new project
+----------------------
 
 ```
-sbt new scala/scala-seed.g8
+sbt new francescopellegrini/scala-seed.g8
 ```
 
 Template license
 ----------------
-Written in 2016-2018 by Lightbend, Inc.
+Written in 2018 by Francesco Pellegrini
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
 and neighboring rights to this template to the public domain worldwide.
