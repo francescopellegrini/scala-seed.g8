@@ -1,3 +1,3 @@
 package io.github.francescopellegrini.$name;format="word,lower"$.config
 
-case class DaoConfig()
+final case class DaoConfig()
