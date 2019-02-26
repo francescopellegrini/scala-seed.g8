@@ -1,9 +1,25 @@
 package io.github.francescopellegrini.$name;format="word,lower"$
 
-import com.typesafe.scalalogging.LazyLogging
-import org.scalatest.{AsyncWordSpecLike, Matchers}
+import org.scalatest.{Matchers, fixture}
 
 /**
-  * Base trait for test classes.
+  * Base trait for testing classes.
+  * Example:
+  *
+  * {{{
+  * // Override FixtureParam type definition
+  * case class FixtureParam(???)
+  *
+  * override def withFixture(test: OneArgTest): Outcome = {
+  *   // Build the fixture
+  *   val theFixture = FixtureParam(???)
+  *
+  *   try {
+  *     withFixture(test.toNoArgTest(theFixture)) // "loan" the fixture to the test
+  *   } finally {
+  *     // Eventually cleanup lonaned resources
+  *   }
+  * }
+  * }}}
   */
-trait BaseSpec extends AsyncWordSpecLike with Matchers with LazyLogging
+trait BaseSpec extends fixture.WordSpecLike with Matchers
