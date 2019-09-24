@@ -4,8 +4,8 @@ import io.github.francescopellegrini.$name;format="word,lower"$.config.AppConfig
 import com.typesafe.scalalogging.LazyLogging
 
 /**
-  * Application entrypoint
-  */
+ * Application entrypoint
+ */
 object Main extends App with LazyLogging {
   logger.info("Starting up")
 
