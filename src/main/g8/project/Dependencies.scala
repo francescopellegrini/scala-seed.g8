@@ -10,7 +10,7 @@ object Dependencies {
 
   object Versions {
 
-    val Scala          = "2.13.1"
+    val Scala          = "2.12.9"
     val LogbackClassic = "1.2.3"
     val PureConfig     = "0.12.1"
     val ScalaLogging   = "3.9.2"
