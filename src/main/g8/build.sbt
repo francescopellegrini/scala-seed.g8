@@ -27,7 +27,6 @@ lazy val dependenciesSettings = Seq(
   resolvers ++= CustomResolvers.resolvers
 )
 
-
 lazy val publishSettings = Seq(
   Test / publishArtifact := false,
   releaseProcess := Seq[ReleaseStep](

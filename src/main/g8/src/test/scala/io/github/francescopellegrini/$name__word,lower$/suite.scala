@@ -5,15 +5,15 @@ import org.scalatest.{AsyncTestSuite, Matchers, TestSuite}
 trait SuiteOps extends Matchers
 
 /**
- * Base trait for test suites
- */
+  * Base trait for test suites
+  */
 trait Suite extends SuiteOps {
   this: TestSuite =>
 }
 
 /**
- * Base trait for async test suites
- */
+  * Base trait for async test suites
+  */
 trait AsyncSuite extends SuiteOps {
   this: AsyncTestSuite =>
 }

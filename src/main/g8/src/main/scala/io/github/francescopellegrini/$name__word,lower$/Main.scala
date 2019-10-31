@@ -9,7 +9,7 @@ import com.typesafe.scalalogging.LazyLogging
 object Main extends App with LazyLogging {
   logger.info("Starting up")
 
-  val config = AppConfig.load
+  val config = AppConfig()
 
   logger.debug(s"Configuration loaded", config)
 
