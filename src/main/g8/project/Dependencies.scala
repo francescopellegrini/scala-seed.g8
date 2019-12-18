@@ -14,8 +14,8 @@ object Dependencies {
     val LogbackClassic = "1.2.3"
     val PureConfig     = "0.12.1"
     val ScalaLogging   = "3.9.2"
-    val ScalaTest      = "3.0.8"
-//    val Slf4j          = "1.7.26"
+    val ScalaTest      = "3.1.0"
+//    val Slf4j          = "1.7.30"
 
   }
 

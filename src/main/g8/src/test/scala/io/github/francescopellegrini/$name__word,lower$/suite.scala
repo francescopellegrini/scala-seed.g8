@@ -1,6 +1,7 @@
 package io.github.francescopellegrini.$name;format="word,lower"$
 
-import org.scalatest.{AsyncTestSuite, Matchers, TestSuite}
+import org.scalatest.{AsyncTestSuite, TestSuite}
+import org.scalatest.matchers.should.Matchers
 
 trait SuiteOps extends Matchers
 
