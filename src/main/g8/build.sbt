@@ -62,3 +62,6 @@ enablePlugins(JavaAppPackaging, DockerPlugin) // Add AshScriptPlugin if base ima
 dockerBaseImage := "openjdk:8-jre-alpine"
 maintainer in Docker := "Francesco Pellegrini"
 //dockerExposedPorts := Seq()
+
+// Remove the top level directory for universal package
+topLevelDirectory := None
