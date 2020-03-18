@@ -1,6 +1,9 @@
 import Dependencies._
 import ReleaseTransformations._
 
+addCommandAlias("fix", "all compile:scalafix test:scalafix")
+addCommandAlias("fixCheck", "; compile:scalafix --check ; test:scalafix --check")
+
 lazy val compileSettings = Seq(
   Compile / compile := (Compile / compile)
     .dependsOn(
@@ -19,11 +22,12 @@ lazy val compileSettings = Seq(
     "-Ywarn-unused"
   ),
   scalaVersion := Versions.Scala
-)
+) ++ CompilerPlugins.compilerPlugins
 
 lazy val dependenciesSettings = Seq(
   excludeDependencies ++= excludeDeps,
   libraryDependencies ++= prodDeps ++ testDeps,
+  ThisBuild / scalafixDependencies ++= scalafixDeps,
   resolvers ++= CustomResolvers.resolvers
 )
 
@@ -44,6 +48,11 @@ lazy val testSettings = Seq(
   Test / parallelExecution := false
 )
 
+lazy val integrationTestSettings = Defaults.itSettings ++ Seq(
+  IntegrationTest / logBuffered := false,
+  IntegrationTest / parallelExecution := false
+) ++ inConfig(IntegrationTest)(org.scalafmt.sbt.ScalafmtPlugin.scalafmtConfigSettings)
+
 lazy val root = (project in file("."))
   .settings(
     name := "$name;format="normalize"$",
@@ -53,6 +62,8 @@ lazy val root = (project in file("."))
   .settings(dependenciesSettings: _*)
   .settings(publishSettings: _*)
   .settings(testSettings: _*)
+  .configs(IntegrationTest)
+  .settings(integrationTestSettings: _*)
 
 /**
   * sbt-native-packager plugin

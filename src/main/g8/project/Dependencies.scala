@@ -10,12 +10,13 @@ object Dependencies {
 
   object Versions {
 
-    val Scala          = "2.12.11"
-    val LogbackClassic = "1.2.3"
-    val PureConfig     = "0.12.3"
-    val ScalaLogging   = "3.9.2"
-    val ScalaTest      = "3.1.1"
-//    val Slf4j          = "1.7.30"
+    val Scala               = "2.12.10"
+    val ScalafixSortImports = "0.3.2"
+    val LogbackClassic      = "1.2.3"
+    val PureConfig          = "0.12.3"
+    val ScalaLogging        = "3.9.2"
+    val ScalaTest           = "3.1.1"
+//    val Slf4j               = "1.7.30"
 
   }
 
@@ -33,6 +34,10 @@ object Dependencies {
     )
 
   }
+
+  lazy val scalafixDeps: Seq[ModuleID] = Seq(
+    "com.nequissimus" %% "sort-imports" % Versions.ScalafixSortImports
+  )
 
   lazy val prodDeps: Seq[ModuleID] = Seq(
     "com.github.pureconfig" %% "pureconfig" % Versions.PureConfig
