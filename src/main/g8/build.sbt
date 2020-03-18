@@ -11,16 +11,6 @@ lazy val compileSettings = Seq(
       Compile / scalafmtAll
     )
     .value,
-  scalacOptions ++= Seq(
-    "-deprecation",
-    "-encoding",
-    "utf8",
-    "-Xlint:missing-interpolator",
-    "-Xlint:private-shadow",
-    "-Xlint:type-parameter-shadow",
-    "-Ywarn-dead-code",
-    "-Ywarn-unused"
-  ),
   scalaVersion := Versions.Scala
 ) ++ CompilerPlugins.compilerPlugins
 
