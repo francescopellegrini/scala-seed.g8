@@ -1,4 +1,4 @@
-package io.github.francescopellegrini.$name;format="word,lower"$.config
+package $package$.$name;format="word,lower"$.config
 
 import pureconfig.ConfigSource
 import pureconfig.generic.auto._

@@ -46,7 +46,7 @@ lazy val integrationTestSettings = Defaults.itSettings ++ Seq(
 lazy val root = (project in file("."))
   .settings(
     name := "$name;format="normalize"$",
-    organization := "io.github.francescopellegrini"
+    organization := "$package$"
   )
   .settings(compileSettings: _*)
   .settings(dependenciesSettings: _*)

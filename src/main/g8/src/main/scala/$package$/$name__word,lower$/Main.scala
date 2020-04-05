@@ -1,7 +1,7 @@
-package io.github.francescopellegrini.$name;format="word,lower"$
+package $package$.$name;format="word,lower"$
 
 import com.typesafe.scalalogging.LazyLogging
-import io.github.francescopellegrini.$name;format="word,lower"$.config.AppConfig
+import $package$.$name;format="word,lower"$.config.AppConfig
 
 /**
   * Application entrypoint

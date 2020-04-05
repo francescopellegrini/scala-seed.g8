@@ -10,12 +10,12 @@ object Dependencies {
 
   object Versions {
 
-    val Scala               = "$scalaVersion$"
+    val Scala               = "$scala_version$"
     val ScalafixSortImports = "0.3.2"
     val LogbackClassic      = "1.2.3"
     val PureConfig          = "0.12.3"
     val ScalaLogging        = "3.9.2"
-    val ScalaTest           = "3.1.1"
+    val ScalaTest           = "$scalatest_version$"
 //    val Slf4j               = "1.7.30"
 
   }
