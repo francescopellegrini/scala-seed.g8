@@ -6,12 +6,16 @@ import $package$.$name;format="word,lower"$.config.AppConfig
 /**
   * Application entrypoint
   */
-object Main extends App with LazyLogging {
-  logger.info("Starting up")
+object Main extends LazyLogging {
 
-  val config = AppConfig()
+  def main(args: Array[String]): Unit = {
+    logger.info("Starting up")
 
-  logger.debug(s"Configuration loaded", config)
+    AppConfig.load.fold(
+      errors => logger.error(s"Error loading configuration: ${errors.prettyPrint()}"),
+      config => logger.debug(s"Configuration loaded", config)
+    )
 
-  logger.info("Shutting down")
+    logger.info("Shutting down")
+  }
 }
