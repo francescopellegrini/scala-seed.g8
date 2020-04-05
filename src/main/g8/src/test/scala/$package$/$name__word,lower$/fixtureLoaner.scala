@@ -1,4 +1,4 @@
-package io.github.francescopellegrini.$name;format="word,lower"$
+package $package$.$name;format="word,lower"$
 
 import org.scalatest.Assertion
 
