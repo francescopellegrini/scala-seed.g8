@@ -12,7 +12,7 @@ object Main extends LazyLogging {
     logger.info("Starting up")
 
     AppConfig.load.fold(
-      errors => logger.error(s"Error loading configuration: ${errors.prettyPrint()}"),
+      errors => logger.error(s"Error loading configuration: \${errors.prettyPrint()}"),
       config => logger.debug(s"Configuration loaded", config)
     )
 
