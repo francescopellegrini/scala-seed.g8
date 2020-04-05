@@ -1,14 +1,17 @@
+# Scala seed
+
+![Build](https://github.com/francescopellegrini/scala-seed.g8/workflows/Build/badge.svg)
+
 A [Giter8][g8] template for Scala projects!
 
-Creating a new project
-----------------------
+# Creating a new project
 
 ```
 sbt new francescopellegrini/scala-seed.g8
 ```
 
-Template license
-----------------
+# Template license
+
 Written in 2018 by Francesco Pellegrini
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
