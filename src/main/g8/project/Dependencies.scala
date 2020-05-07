@@ -23,8 +23,8 @@ object Dependencies {
   object Logging {
 
     lazy val prodDeps: Seq[ModuleID] = Seq(
-      "ch.qos.logback"             % "logback-classic" % Versions.LogbackClassic, // required by scala-logging
-      "com.typesafe.scala-logging" %% "scala-logging"  % Versions.ScalaLogging
+      "ch.qos.logback"              % "logback-classic" % Versions.LogbackClassic, // required by scala-logging
+      "com.typesafe.scala-logging" %% "scala-logging"   % Versions.ScalaLogging
 //      "org.slf4j"                  % "log4j-over-slf4j" % Versions.Slf4j // mandatory when log4j gets excluded
     )
 
