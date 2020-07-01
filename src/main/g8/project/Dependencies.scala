@@ -44,8 +44,9 @@ object Dependencies {
   ) ++ Logging.prodDeps
 
   lazy val testDeps: Seq[ModuleID] = Seq(
-    "org.scalatest" %% "scalatest" % Versions.ScalaTest
-  ).map(_ % Test)
+    "org.scalatest" %% "scalatest-wordspec"     % Versions.ScalaTest,
+    "org.scalatest" %% "scalatest-mustmatchers" % Versions.ScalaTest
+  ).map(_ % s"\$Test,\$IntegrationTest")
 
   lazy val excludeDeps: Seq[ExclusionRule] = Nil ++ Logging.excludeDeps
 
