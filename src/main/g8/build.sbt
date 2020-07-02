@@ -5,6 +5,8 @@ import sbtrelease.Version
 addCommandAlias("fix", "all compile:scalafix test:scalafix")
 addCommandAlias("fixCheck", "; compile:scalafix --check ; test:scalafix --check")
 
+lazy val IntegrationTest = config("it").extend(Test)
+
 lazy val compileSettings = Seq(
   Compile / compile := (Compile / compile)
     .dependsOn(
